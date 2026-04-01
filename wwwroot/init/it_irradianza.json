@@ -1,0 +1,150 @@
+{
+  "catalog": [
+    {
+      "type": "group",
+      "name": "Irradianza",
+      "description": "Valore medio orario della radiazione globale al suolo sul piano orizzontale stimata sulla base dalle immagini riprese dal satellite MSG (Meteosat di Seconda Generazione). \n\n <a title=\"Waterloo1883, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons\" href=\"https://commons.wikimedia.org/wiki/File:Mapa_f%C3%ADsico_de_localizaci%C3%B3n_Hu%C3%A1nuco.png\"><img width=\"512\" alt=\"Mapa físico de localización Huánuco\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Mapa_f%C3%ADsico_de_localizaci%C3%B3n_Hu%C3%A1nuco.png/512px-Mapa_f%C3%ADsico_de_localizaci%C3%B3n_Hu%C3%A1nuco.png\"></a> ",
+      "isOpen": true,
+      "members": [
+        {
+          "type": "wms",
+          "name": "prod75_aeolian_gis3",
+          "description": "auckland producibilità a 75m da aeolian",
+          "url": "http://gis3.rse-web.it:8080/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "prod_75",
+          "styles": "",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "prod_75gis3"
+        },
+        {
+          "type": "wms",
+          "name": "prod75_aeolian_gis2",
+          "description": "producibilità a 75m da aeolian su kawau gis2",
+          "url": "http://gis2.rse-web.it:8080/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "prod_75",
+          "styles": "",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "prod_75gis2"
+        },
+        {
+          "type": "wms",
+          "name": "dati_atlasolare_n12_xterria_gisaria", //ok legenda caratteri bianchi
+          "description": "Valore medio orario della radiazione globale al suolo del giorno precedente alle ore 12 GMT giorno xxxxxx.",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>Irradianza ore 12: <b>{{Radiazione}} W/m<sup>2</sup></b><br/>punto: lat{{Lat}} lon{{Lon}}, gid {{gid}}</p>"
+          },
+          "layers": "dati_atlasolare_n12_xterria",
+          "styles": "atlasolare_interpolato_xterria",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "irradianza_h12_xterria"
+        },
+        {
+          "type": "wms",
+          "name": "dati_atlasolare_n12 (Irradianza h12)", //legenda caratteri neri
+          "description": "Valore medio orario della radiazione globale al suolo del giorno precedente alle ore 12 GMT giorno xxxxxx.",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>Irradianza ore 12: <b>{{Radiazione}} W/m<sup>2</sup></b>, punto: Lat{{Lat}} Lon{{Lon}}, gid {{gid}}</p>"
+          },
+          "layers": "dati_atlasolare_n12",
+          "styles": "atlasolare_interpolato",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "irradianza_h12"
+        },
+        {
+          "type": "wms",
+          "name": "dati_atlasolare_n12_interpolato", //non mostra la legenda ?!?
+          "description": "Valore medio orario della radiazione globale al suolo del giorno precedente alle ore 12 GMT giorno xxxxxx.",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>Irradianza ore 12: <b>{{Radiazione}} W/m<sup>2</sup></b>, punto: Lat{{Lat}} Lon{{Lon}}, gid {{gid}}</p>"
+          },
+          "layers": "ATLASOLARE:dati_atlasolare_n12_interpolato",
+          "styles": "ATLASOLARE:atlasolare_interpolato",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": false,
+          "id": "irradianza_h12_interpolato"
+        },
+        {
+          "type": "wms",
+          "name": "Irradianza h13",
+          "description": "Valore medio orario della radiazione globale al suolo del giorno precedente alle ore 13 GMT giorno xxxxxx.",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>Irradianza ore 13: <b>{{Radiazione}} W/m<sup>2</sup></b>, punto: Lat{{Lat}} Lon{{Lon}}, gid {{gid}}</p>"
+          },
+          "metadataUrls": [
+            {
+              "title": "link metadato",
+              "url": "https://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=108&anno=2021"
+            }
+          ],
+          "layers": "dati_atlasolare_n13",
+          "styles": "atlasolare_interpolato",
+          "id": "irradianza_h13"
+        },
+        {
+          "type": "wms",
+          "name": "tas_rcp85_mod_eucordex_sce_DJF_1971_2000_vabs",
+          "description": "tas_rcp85_mod_eucordex_sce_DJF_1971_2000_vabs",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "GRAY_INDEX {{GRAY_INDEX}}</p>"
+          },
+          "metadataUrls": [
+            {
+              "title": "link metadato",
+              "url": "https://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=108&anno=2021"
+            }
+          ],
+          "layers": "tas_rcp85_mod_eucordex_sce_DJF_1971_2000_vabs",
+          "id": "tas_rcp85_mod_eucordex_sce_DJF_1971_2000_vabs"
+        },
+        {
+          "type": "wms",
+          "name": "Confini provinciali",
+          "description": "Limiti amministrativi provinciali selezionabili in differenti anni. Fonte dati ISTAT.",
+          "url": "http://gis2.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>Provincia <b>{{den_uts}}</b> , visualizzazione anno {{anno}}</p><p style='display: block; text-align: center;'> <a href=\"https://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=109&anno={{anno}}\">link al metadato </a> </p>"
+          },
+          "metadataUrls": [
+            {
+              "title": "link metadato",
+              "url": "https://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=109&anno=2021"
+            }
+          ],
+          "layers": "new_atlante_integrato:v_province_terria"
+        },
+        {
+          "type": "wms",
+          "name": "Confini comunali",
+          "description": "Limiti amministrativi comunali selezionabili in differenti anni. Fonte dati ISTAT.",
+          "url": "http://gis2.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>Comune <b>{{comune}}</b> , visualizzazione anno {{anno}}</p><p style='display: block; text-align: center;'> <a href=\"http://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=110&anno={{anno}}\">link al metadato </a> </p>"
+          },
+          "metadataUrls": [
+            {
+              "title": "link metadato",
+              "url": "https://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=110&anno=2021"
+            }
+          ],
+          "layers": "new_atlante_integrato:v_comuni_terria"
+        }
+      ]
+    }
+  ]
+  // "corsDomains": [ "https://gisaria.rse-web.it" ]
+}

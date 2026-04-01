@@ -1,0 +1,69 @@
+{
+  "catalog": [
+    {
+      "type": "group",
+      "name": "Griglie dati gisaria it_griglie_ruapuke2.json",
+      "description": "Griglie da ruapuke",
+      "isOpen": true,
+      "members": [
+        {
+          "type": "wms",
+          "name": "ruapuke_poligoni_mtg", //ok testato
+          "description": "poligoni_mtg da ruapuke gisaria",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>poligoni mtg -  gid {{gid}} lat {{lat}} lon {{lon}}<br/>field_3 {{field_3}} field_4 {{field_4}}</p>"
+          },
+          "layers": "SUNRISE:poligoni_mtg",
+          "styles": "polygon",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "poligoni_mtg"
+        },
+        {
+          "type": "wms",
+          "name": "climed",
+          "description": "CLIMED2:windmax_obs_merida_sce_YEA_1986_2005_vabs",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "CLIMED2:windmax_obs_merida_sce_YEA_1986_2005_vabs",
+          "styles": "CLIMED2:sfcwind_climed2",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "sfcwind_climed2"
+        },
+        {
+          "type": "wms",
+          "name": "ruapuke_dati_atlasolare_n12",
+          "description": "dati_atlasolare_n12 da ruapuke gisaria",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>Irradianza ore 12: <b>{{Radiazione}} W/m<sup>2</sup></b>, punto: Lat{{Lat}} Lon{{Lon}}, gid {{gid}}</p>"
+          },
+          "layers": "ATLASOLARE:dati_atlasolare_n12",
+          "styles": "atlasolare",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "dati_atlasolare_n12"
+        },
+        {
+          "type": "wms",
+          "name": "cog_sample_5000x5000", //ok testato
+          "description": "SUNRISE:cog_sample_5000x5000",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "SUNRISE:cog_sample_5000x5000",
+          "styles": "CLIMED:CDD_anom_-30+30",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "cog_sample_5000x5000"
+        }
+      ]
+    }
+  ],
+  "corsDomains": ["https://gisaria.rse-web.it"]
+}

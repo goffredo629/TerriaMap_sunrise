@@ -1,0 +1,44 @@
+{
+  // "catalog": [
+  //   {
+  //     "type": "group",
+  //     "name": "dati_csv",
+  //     "description": "prove con dati csv",
+  //     "isOpen": true,
+  //     "members": [
+  //         {
+  //           "type": "csv",
+  //           "name": "dati csv",
+  //           "description": "prova dati csv",
+  //           "url": "http://localhost/test/dati_csv.csv",
+  //           "featureInfoTemplate": {
+  //             "template": "<p>csv <b>{{lon}} {{lat}} </b> {{value}}"
+  //           },
+
+  //           "id": "id_daticsv"
+  //         }
+  //     ]
+  //   }
+  // ]
+  // "catalog": [
+  //   {
+  //     "name": "Australian postcodes",
+  //     "type": "csv",
+  //     "url": "https://tiles.terria.io/static/auspost-locations.csv"
+  //   }
+  // ]
+  "catalog": [
+    {
+      "name": "dati_csv",
+      "type": "csv",
+      "url": "http://localhost:3002/get-csv"
+    }
+    // {     NON FUNZIONA con shapefile ?!?
+    //   "type": "shp",
+    //   "name": "punti",
+    //   "url": "http://localhost:3000/punti.zip",
+    //   "id": "punti"
+    // }
+  ]
+  // "corsDomains": [ "http://localhost:3000" ]
+}

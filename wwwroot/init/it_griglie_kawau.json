@@ -1,0 +1,41 @@
+{
+  "catalog": [
+    {
+      "type": "group",
+      "name": "Griglie dati gis2",
+      "description": "Griglie da kawau",
+      "isOpen": true,
+      "members": [
+        {
+          "type": "wms",
+          "name": "griglia_dati_20240221",
+          "description": "griglia_dati_20240221 no pk",
+          "url": "http://gis2.rse-web.it:8080/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "aeolian:griglia_dati_20240221",
+          "styles": "",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "id_cella"
+        },
+        {
+          "type": "wms",
+          "name": "gis2_griglia_dati_20240221_pk",
+          "description": "gis2_griglia_dati_20240221_pk",
+          "url": "http://gis2.rse-web.it:8080/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "aeolian:gis2_griglia_dati_20240221_pk",
+          "styles": "",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "id"
+        }
+      ]
+    }
+  ],
+  "corsDomains": ["http://gis2.rse-web.it"]
+}

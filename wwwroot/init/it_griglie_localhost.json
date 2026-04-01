@@ -1,0 +1,27 @@
+{
+  "catalog": [
+    {
+      "type": "group",
+      "name": "Griglie dati localhost",
+      "description": "Griglie da localhost",
+      "isOpen": true,
+      "members": [
+        {
+          "type": "wms",
+          "name": "loc_griglia_dati_20240221_epsg3857",
+          "description": "loc_griglia_dati_20240221_epsg3857",
+          "url": "http://localhost:8084/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "aeolian:griglia_dati_20240221_epsg3857",
+          "styles": "polygon",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "gid"
+        }
+      ]
+    }
+  ],
+  "corsDomains": ["http://localhost", "http://localhost:8084"]
+}

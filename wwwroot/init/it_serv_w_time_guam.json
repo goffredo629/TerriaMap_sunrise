@@ -1,0 +1,73 @@
+{
+  "catalog": [
+    {
+      "type": "group",
+      "name": "time serie da guam",
+      "description": "servizi con coordinata temporale da guam",
+      "isOpen": true,
+      "members": [
+        {
+          "type": "wms",
+          "name": "ATLASOLARE:v_dati_radsaf",
+          "description": "irradianza da guam con time ",
+          "url": "https://gisclm.rse-web.it/geoserver/wms",
+          "startTime": "2026-01-01T00:00:00.0Z",
+          "currentTime": "2026-01-01T23:00:00.0Z",
+          "featureInfoTemplate": {
+            "name": "Radiazione {{Radiazione}} {{data_ora}} lat{{Lat}} lon{{Lon}}, gid {{gid}}",
+            "template": "<p>Radiazione {{Radiazione}} {{data_ora}}<br/>run {{data_run}}<br/>lat{{Lat}} lon{{Lon}}, gid {{gid}}</p>",
+            "formats": {
+              "data_run": {
+                "type": "dateTime",
+                "format": "dd-mm-yyyy HH"
+              },
+              "data_ora": {
+                "type": "dateTime",
+                "format": "dd-mm-yyyy HH:MM"
+              }
+            }
+          },
+          "dateFormat": "UTC:dd/mm/yyyy HH:mm",
+          "metadataUrls": [
+            {
+              "title": "link metadato",
+              "url": "https://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=108&anno=2021"
+            }
+          ],
+          "layers": "ATLASOLARE:v_dati_radsaf",
+          "id": "ATLASOLARE:v_dati_radsaf"
+        },
+        {
+          "type": "wms",
+          "name": "ATLASOLARE:v_dati_radsaf_1week",
+          "description": "irradianza da guam con time 1 week of data",
+          "url": "https://gisclm.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "name": "Radiazione {{Radiazione}} {{data_ora}} lat{{Lat}} lon{{Lon}}, gid {{gid}}",
+            "template": "<p>Radiazione {{Radiazione}} {{data_ora}}<br/>run {{data_run}}<br/>lat{{Lat}} lon{{Lon}}, gid {{gid}}</p>",
+            "formats": {
+              "data_run": {
+                "type": "dateTime",
+                "format": "dd-mm-yyyy HH"
+              },
+              "data_ora": {
+                "type": "dateTime",
+                "format": "dd-mm-yyyy HH:MM"
+              }
+            }
+          },
+          "dateFormat": "UTC:dd/mm/yyyy HH:mm",
+          "metadataUrls": [
+            {
+              "title": "link metadato",
+              "url": "https://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=108&anno=2021"
+            }
+          ],
+          "layers": "ATLASOLARE:v_dati_radsaf_1week",
+          "id": "ATLASOLARE:v_dati_radsaf_1week"
+        }
+      ]
+    }
+  ]
+  // "corsDomains": [ "https://gisaria.rse-web.it" ]
+}

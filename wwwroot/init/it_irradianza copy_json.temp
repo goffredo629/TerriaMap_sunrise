@@ -1,0 +1,323 @@
+{
+  "catalog": [
+    {
+      "type": "group",
+      "name": "Irradianza",
+      "description": "Valore medio orario della radiazione globale al suolo sul piano orizzontale stimata sulla base dalle immagini riprese dal satellite MSG (Meteosat di Seconda Generazione). \n\n <a title=\"Waterloo1883, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons\" href=\"https://commons.wikimedia.org/wiki/File:Mapa_f%C3%ADsico_de_localizaci%C3%B3n_Hu%C3%A1nuco.png\"><img width=\"512\" alt=\"Mapa físico de localización Huánuco\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Mapa_f%C3%ADsico_de_localizaci%C3%B3n_Hu%C3%A1nuco.png/512px-Mapa_f%C3%ADsico_de_localizaci%C3%B3n_Hu%C3%A1nuco.png\"></a> ",
+      "isOpen": true,
+      "members": [
+        {
+          "type": "wms",
+          "name": "ruapuke_griglia_dati_20240221_pk",
+          "description": "ruapuke griglia_dati_20240221_pk",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "ruapuke_griglia_dati_20240221_pk",
+          "styles": "",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "id"
+        },
+        {
+          "type": "wms",
+          "name": "ruapuke_poligoni_mtg",
+          "description": "poligoni_mtg da ruapuke gisaria",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>poligoni mtg -  gid {{gid}} lat {{lat}} lon {{lon}}<br/>field_3 {{field_3}} field_4 {{field_4}}</p>"
+          },
+          "layers": "SUNRISE:poligoni_mtg",
+          "styles": "polygon",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "poligoni_mtg"
+        },
+        {
+          "type": "wms",
+          "name": "gis2_griglia_dati_20240221_pk",
+          "description": "kawau gis2_griglia_dati_20240221_pk",
+          "url": "http://gis2.rse-web.it:8080/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "gis2_griglia_dati_20240221_pk",
+          "styles": "",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "id"
+        },
+        {
+          "type": "wms",
+          "name": "gis3_griglia_dati_20240221_pk",
+          "description": "auckland gis3_griglia_dati_20240221_pk",
+          "url": "http://gis3.rse-web.it:8080/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "gis3_griglia_dati_20240221_pk",
+          "styles": "",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "id"
+        },
+        {
+          "type": "wms",
+          "name": "griglia_dati_20240221_gis3",
+          "description": "auckland griglia_dati_20240221 da aeolian",
+          "url": "http://gis3.rse-web.it:8080/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "griglia_dati_20240221",
+          "styles": "",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "griglia_dati_20240221"
+        },
+        {
+          "type": "wms",
+          "name": "prod75_aeolian_gis3",
+          "description": "auckland producibilità a 75m da aeolian",
+          "url": "http://gis3.rse-web.it:8080/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "prod_75",
+          "styles": "",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "prod_75gis3"
+        },
+        {
+          "type": "wms",
+          "name": "prod75_aeolian_gis2",
+          "description": "producibilità a 75m da aeolian su kawau gis2",
+          "url": "http://gis2.rse-web.it:8080/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "prod_75",
+          "styles": "",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "prod_75gis2"
+        },
+        {
+          "type": "wms",
+          "name": "dati_atlasolare_n12_xterria",
+          "description": "Valore medio orario della radiazione globale al suolo del giorno precedente alle ore 12 GMT giorno xxxxxx.",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>Irradianza ore 12: <b>{{Radiazione}} W/m<sup>2</sup></b><br/>punto: lat{{Lat}} lon{{Lon}}, gid {{gid}}</p>"
+          },
+          "layers": "dati_atlasolare_n12_xterria",
+          "styles": "atlasolare_interpolato_xterria",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "irradianza_h12_xterria"
+        },
+        {
+          "type": "wms",
+          "name": "dati_atlasolare_n12 (Irradianza h12)",
+          "description": "Valore medio orario della radiazione globale al suolo del giorno precedente alle ore 12 GMT giorno xxxxxx.",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>Irradianza ore 12: <b>{{Radiazione}} W/m<sup>2</sup></b>, punto: Lat{{Lat}} Lon{{Lon}}, gid {{gid}}</p>"
+          },
+          "layers": "dati_atlasolare_n12",
+          "styles": "atlasolare_interpolato",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "irradianza_h12"
+        },
+        {
+          "type": "wms",
+          "name": "dati_atlasolare_n12_interpolato", //non mostra la legenda ?!?
+          "description": "Valore medio orario della radiazione globale al suolo del giorno precedente alle ore 12 GMT giorno xxxxxx.",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>Irradianza ore 12: <b>{{Radiazione}} W/m<sup>2</sup></b>, punto: Lat{{Lat}} Lon{{Lon}}, gid {{gid}}</p>"
+          },
+          "layers": "ATLASOLARE:dati_atlasolare_n12_interpolato",
+          "styles": "ATLASOLARE:atlasolare_interpolato",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": false,
+          "id": "irradianza_h12_interpolato"
+        },
+        {
+          "type": "wms",
+          "name": "Irradianza h13",
+          "description": "Valore medio orario della radiazione globale al suolo del giorno precedente alle ore 13 GMT giorno xxxxxx.",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>Irradianza ore 13: <b>{{Radiazione}} W/m<sup>2</sup></b>, punto: Lat{{Lat}} Lon{{Lon}}, gid {{gid}}</p>"
+          },
+          "metadataUrls": [
+            {
+              "title": "link metadato",
+              "url": "https://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=108&anno=2021"
+            }
+          ],
+          "layers": "dati_atlasolare_n13",
+          "styles": "atlasolare_interpolato",
+          "id": "irradianza_h13"
+        },
+        {
+          "type": "wms",
+          "name": "v_temp_rams_epsg3857_ts_styleInterpolato",
+          "description": "temperatura RAMS ",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "startTime": "2019-01-08T00:00:00.0Z",
+          "currentTime": "2019-01-08T12:00:00.0Z",
+          "featureInfoTemplate": {
+            "name": "temperatura RAMS {{temp}}°C {{data_ora}} lat{{Lat}} lon{{Lon}}, gid {{gid}} styleInterpolato",
+            "template": "<p>temperatura RAMS {{temp}}<sup>o</sup>C {{data_ora}}<br/>run {{data_run}}<br/>lat{{Lat}} lon{{Lon}}, gid {{gid}}</p>",
+            "formats": {
+              "data_run": {
+                "type": "dateTime",
+                "format": "dd-mm-yyyy HH"
+              },
+              "data_ora": {
+                "type": "dateTime",
+                "format": "dd-mm-yyyy HH:MM"
+              }
+            }
+          },
+          "dateFormat": "UTC:dd/mm/yyyy hh:mm",
+          "metadataUrls": [
+            {
+              "title": "link metadato",
+              "url": "https://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=108&anno=2021"
+            }
+          ],
+          "layers": "v_temp_rams_epsg3857_ts_styleInterpolato",
+          "id": "v_temp_rams_epsg3857_ts_styleInterpolato"
+        },
+        {
+          "type": "wms",
+          "name": "Temperatura RAMS time serie",
+          "description": "temperatura RAMS ",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "startTime": "2019-01-08T00:00:00.0Z",
+          "currentTime": "2019-01-08T12:00:00.0Z",
+          "featureInfoTemplate": {
+            "name": "temperatura RAMS {{temp}}°C {{data_ora}} lat{{Lat}} lon{{Lon}}, gid {{gid}}",
+            "template": "<p>temperatura RAMS {{temp}}<sup>o</sup>C {{data_ora}}<br/>run {{data_run}}<br/>lat{{Lat}} lon{{Lon}}, gid {{gid}}</p>",
+            "formats": {
+              "data_run": {
+                "type": "dateTime",
+                "format": "dd-mm-yyyy HH"
+              },
+              "data_ora": {
+                "type": "dateTime",
+                "format": "dd-mm-yyyy HH:MM"
+              }
+            }
+          },
+          "dateFormat": "UTC:dd/mm/yyyy hh:mm",
+          "metadataUrls": [
+            {
+              "title": "link metadato",
+              "url": "https://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=108&anno=2021"
+            }
+          ],
+          "layers": "v_temp_rams_epsg3857_ts",
+          "id": "v_temp_rams_epsg3857_ts"
+        },
+        {
+          "type": "wms",
+          "name": "DNI RAMS time serie",
+          "description": "DNI RAMS ",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>DNI RAMS {{DNI}} {{data_run}} {{data_ora}} GHI{{GHI}} Lat{{Lat}} Lon{{Lon}}, gid {{gid}}</p>"
+          },
+          "metadataUrls": [
+            {
+              "title": "link metadato",
+              "url": "https://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=108&anno=2021"
+            }
+          ],
+          "layers": "v_dni_rams_epsg3857_ts",
+          "id": "v_dni_rams_epsg3857_ts"
+        },
+        {
+          "type": "wms",
+          "name": "GHI RAMS time serie",
+          "description": "GHI RAMS ",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>GHI RAMS {{GHI}} {{data_run}} {{data_ora}}<br/>DNI {{DNI}}<br/>Lat{{Lat}} Lon{{Lon}}, gid {{gid}}</p>",
+            "name": "GHI RAMS {{GHI}} W/m<sup>2</sup> lat {{Lat}} lon {{Lon}} {{data_ora}},",
+            "formats": {
+              "data_ora": {
+                "type": "dateTime",
+                "format": "dd-mm-yyyy HH:MM"
+              }
+            }
+          },
+          "metadataUrls": [
+            {
+              "title": "link metadato",
+              "url": "https://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=108&anno=2021"
+            }
+          ],
+          "layers": "v_ghi_rams_epsg3857_ts",
+          "id": "v_ghi_rams_epsg3857_ts"
+        },
+        {
+          "type": "wms",
+          "name": "tas_rcp85_mod_eucordex_sce_DJF_1971_2000_vabs",
+          "description": "tas_rcp85_mod_eucordex_sce_DJF_1971_2000_vabs",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "GRAY_INDEX {{GRAY_INDEX}}</p>"
+          },
+          "metadataUrls": [
+            {
+              "title": "link metadato",
+              "url": "https://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=108&anno=2021"
+            }
+          ],
+          "layers": "tas_rcp85_mod_eucordex_sce_DJF_1971_2000_vabs",
+          "id": "tas_rcp85_mod_eucordex_sce_DJF_1971_2000_vabs"
+        },
+        {
+          "type": "wms",
+          "name": "Confini provinciali",
+          "description": "Limiti amministrativi provinciali selezionabili in differenti anni. Fonte dati ISTAT.",
+          "url": "http://gis2.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>Provincia <b>{{den_uts}}</b> , visualizzazione anno {{anno}}</p><p style='display: block; text-align: center;'> <a href=\"https://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=109&anno={{anno}}\">link al metadato </a> </p>"
+          },
+          "metadataUrls": [
+            {
+              "title": "link metadato",
+              "url": "https://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=109&anno=2021"
+            }
+          ],
+          "layers": "new_atlante_integrato:v_province_terria"
+        },
+        {
+          "type": "wms",
+          "name": "Confini comunali",
+          "description": "Limiti amministrativi comunali selezionabili in differenti anni. Fonte dati ISTAT.",
+          "url": "http://gis2.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>Comune <b>{{comune}}</b> , visualizzazione anno {{anno}}</p><p style='display: block; text-align: center;'> <a href=\"http://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=110&anno={{anno}}\">link al metadato </a> </p>"
+          },
+          "metadataUrls": [
+            {
+              "title": "link metadato",
+              "url": "https://dbeta.rse-web.it/atlante_integrato_metadati.php?var_id=110&anno=2021"
+            }
+          ],
+          "layers": "new_atlante_integrato:v_comuni_terria"
+        }
+      ]
+    }
+  ]
+  // "corsDomains": [ "https://gisaria.rse-web.it" ]
+}

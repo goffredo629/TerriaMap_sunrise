@@ -1,0 +1,83 @@
+{
+  "catalog": [
+    {
+      "type": "group",
+      "name": "Griglie dati gisaria",
+      "description": "Griglie da ruapuke",
+      "isOpen": true,
+      "members": [
+        {
+          "type": "wms",
+          "name": "ruapuke_poligoni_mtg",
+          "description": "poligoni_mtg da ruapuke gisaria",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": "<p>poligoni mtg -  gid {{gid}} lat {{lat}} lon {{lon}}<br/>field_3 {{field_3}} field_4 {{field_4}}</p>"
+          },
+          "layers": "SUNRISE:poligoni_mtg",
+          "styles": "polygon",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "poligoni_mtg"
+        },
+        {
+          "type": "wms",
+          "name": "griglia_dati_20240221_epsg3857",
+          "description": "griglia_dati_20240221_epsg3857",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "aeolian:griglia_dati_20240221_epsg3857",
+          "styles": "polygon",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "gid"
+        },
+        {
+          "type": "wms",
+          "name": "climed",
+          "description": "CLIMED2:windmax_obs_merida_sce_YEA_1986_2005_vabs",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "CLIMED2:windmax_obs_merida_sce_YEA_1986_2005_vabs",
+          "styles": "CLIMED2:sfcwind_climed2",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "gid"
+        },
+        {
+          "type": "wms",
+          "name": "tif_filippo",
+          "description": "tif_filippo",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "SUNRISE:tif_filippo",
+          "styles": "CLIMED2:sfcwind_climed2",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "gid"
+        },
+        {
+          "type": "wms",
+          "name": "cog_sample_5000x5000",
+          "description": "SUNRISE:cog_sample_5000x5000",
+          "url": "https://gisaria.rse-web.it/geoserver/wms",
+          "featureInfoTemplate": {
+            "template": ""
+          },
+          "layers": "SUNRISE:cog_sample_5000x5000",
+          "styles": "CLIMED:CDD_anom_-30+30",
+          "isGeoServer": true,
+          "supportsGetLegendGraphic": true,
+          "id": "gid"
+        }
+      ]
+    }
+  ],
+  "corsDomains": ["https://gisaria.rse-web.it"]
+}

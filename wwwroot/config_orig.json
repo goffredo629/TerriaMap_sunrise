@@ -1,20 +1,7 @@
 {
   /* Names of init files (in wwwroot/init), without the .json extension, to load by default */
-  "initializationUrls": [
-    "it_dati_csv", //x utilizzare questo servizio lanciare prima server node D:\Express-server\download_csv\node index.js
-    "it_aeo_cartografia", // cartografia di base: confini regionali, provinciali, comunali
-    // "it_griglie_localhost",
-    "it_griglie_ruapuke2", // griglie da ruapuke gisaria: poligoni_mtg, dati_atlasolare_n12, climed_windmax, cog_sample_5000x5000
-    "it_irradianza", //prod75_aeolian_gis3, prod75_aeolian_gis2, dati_atlasolare_n12_xterria, dati_atlasolare_n12, dati_atlasolare_n12_interpolato, dati_atlasolare_n13
-    "it_serv_w_time_gisaria", // gisaria=ruapuke wms con time serie: v_temp_rams_epsg3857_ts_styleInterpolato, v_temp_rams_epsg3857_ts, v_dni_rams_epsg3857_ts, v_ghi_rams_epsg3857_ts
-    "it_serv_w_time_guam", // gisclm=guam wms con time serie:
-    "simple",
-    "it"
-  ],
+  "initializationUrls": ["simple"],
   "parameters": {
-    // "tabbedCatalog": true,           //da aeolian
-    "useCesiumIonTerrain": false, //idem
-    "cesiumTerrainAssetId": false, //idem
     "googleUrlShortenerKey": null,
     "googleAnalyticsKey": null,
     "googleAnalyticsOptions": null,
@@ -50,7 +37,7 @@
             link: "http://www.example.com"
         },*/
     // This is used in various text messages. You should also set <title> in index.html
-    "appName": "Terria Map Sunrise",
+    "appName": "Terria Map",
     // See comments in lib/Views/global.scss for further information about customising colors, logos, fonts etc.
     "brandBarElements": [
       "",
